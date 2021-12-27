@@ -1,9 +1,22 @@
+
 body{
+    height: 100vh;
+    width: 100vw;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+
 }
 
-
+.container{
+    scroll-behavior: smooth;
+    height: 100%;
+    width:100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
 .nav-text{
     font-size: 20px;
@@ -18,7 +31,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 60px;
     width: 100vw;
     background-color: black;
     display: flex;
@@ -27,16 +40,20 @@ body{
 }
 
 .nav-left{
-    height: 50px;
-    width: 50vw;
-}
-
-.nav-right{
-    height: 50px;
     width: 50vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-right{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-textbox{
@@ -46,6 +63,12 @@ body{
     height: 100%;
     line-height: 45px;
     padding-left: 10px;
+}
+
+.nav-textbox a{
+    display: block;
+    height: 50px;
+
 }
 .nav-textbox:hover{
     color: green;
@@ -58,18 +81,105 @@ body{
 }
 .intro{
     position: relative;
-    margin-top: 50px;
+    height:calc(100vh - 60px);
+    width: 100vw;
+    margin-top: 60px;
     display: flex;
     flex-direction: row;
+    scroll-snap-align: end;
 }
 
 .intro-left{
-    height: 100vh;
     width: 50vw;
     background-color: #14213d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 8rem; */
+    /* align-items: center; */
 }
+
+.intro-left-quote{
+    color: #fca311;
+    margin-left: 8rem;
+    font-weight: 700;
+    font-size: 100px;
+}
+
+.intro-left-quote-name{
+    margin-left: 8rem;
+    color: #fca311;
+    font-weight: 700;
+    font-size: 100px;
+}
+
 .intro-right{
-    height: 100vh;
     width: 50vw;
     background-color: #fca311;
+}
+
+.projects{
+    width: 100vw;
+    height:calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #14213d;
+    scroll-snap-align: end;
+}
+
+.projects-header{
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects-header-text{
+    color: #fca311;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.contact{
+    height:calc(100vh - 60px);
+    width: 100vw;
+    background-color: #fca311;
+    scroll-snap-align: end;
+    display: flex;
+    flex-direction: row;
+}
+.contact-left{
+    width:50vw;
+    background-color: #fca311;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-right{
+    width:50vw;
+    background-color: #14213d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-right form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fca311;
+}
+
+.contact-form-element{
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-button{
+    width: 50%;
+    
 }
